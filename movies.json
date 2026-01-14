@@ -1,0 +1,112 @@
+{
+    "sliderMovies": [
+        {
+            "title": "after the rain",
+            "rating": "9.3",
+            "year": "2011-2019",
+            "genre": "Fantasy",
+            "image": "img/after-the-rain.png"
+        },
+        {
+            "title": "zehar",
+            "rating": "8.1",
+            "year": "2024",
+            "genre": "Drama",
+            "image": "img/zehar.png"
+        },
+        {
+            "title": "bergen",
+            "rating": "7.8",
+            "year": "2024",
+            "genre": "Romance",
+            "image": "img/bergen.png"
+        },
+        {
+            "title": "lion king",
+            "rating": "6.8",
+            "year": "2024",
+            "genre": "Animation",
+            "image": "img/lion-king.png"
+        },
+        {
+            "title": "godzilla",
+            "rating": "8.8",
+            "year": "2024",
+            "genre": "Sci-Fi",
+            "image": "img/godzila.png"
+        },
+        {
+            "title": "spirited away",
+            "rating": "8.8",
+            "year": "2024",
+            "genre": "Animation",
+            "image": "img/spirited-away.jpg"
+        },
+        {
+            "title": "news of the world",
+            "rating": "8.7",
+            "year": "2024",
+            "genre": "Action",
+            "image": "img/news-world.jpg"
+        },
+        {
+            "title": "grey's anatomy",
+            "rating": "8.8",
+            "year": "2010",
+            "genre": "Thriller",
+            "image": "img/greys-anatomy.jpg"
+        }
+    ],
+    "continueMovies": [
+        {
+            "title": " ",
+            "rating": "9.3",
+            "image": "img/lion-king-card.png"
+        },
+        {
+            "title": " ",
+            "rating": "8.1",
+            "image": "img/vikings.png"
+        },
+        {
+            "title": " ",
+            "rating": "7.8",
+            "image": "img/zehar-card.png"
+        },
+        {
+            "title": " ",
+            "rating": "6.8",
+            "image": "img/greys-card.png"
+        },
+        {
+            "title": " ",
+            "rating": "8.8",
+            "image": "img/bergen-card.png"
+        },
+        {
+            "title": " ",
+            "rating": "7.2",
+            "image": "img/courier.png"
+        },
+        {
+            "title": " ",
+            "rating": "8.7",
+            "image": "img/marksman.png"
+        },
+        {
+            "title": " ",
+            "rating": "8.7",
+            "image": "img/wanda-vision.png"
+        },
+        {
+            "title": " ",
+            "rating": "7.4",
+            "image": "img/justice-league-card.png"
+        },
+        {
+            "title": " ",
+            "rating": "9.3",
+            "image": "img/attack-titan.png"
+        }
+    ]
+}
