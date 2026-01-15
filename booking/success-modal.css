@@ -1,0 +1,77 @@
+/* Success Modal */
+.success-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-modal.show {
+    display: flex;
+}
+
+.success-modal-content {
+    background: #e8e8e8;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 8px;
+    padding: 35px 30px;
+    position: relative;
+    text-align: center;
+}
+
+.close-success {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.close-success:hover {
+    color: #000;
+}
+
+.success-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.save-tickets-btn {
+    width: 100%;
+    padding: 13px;
+    background: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.save-tickets-btn:hover {
+    background: #6B0000;
+}

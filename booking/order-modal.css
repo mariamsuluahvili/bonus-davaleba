@@ -1,0 +1,216 @@
+/* Order Modal */
+.order-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-modal.show {
+    display: flex;
+}
+
+.order-modal-content {
+    background: #e8e8e8;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 35px 25px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+.order-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #000;
+    letter-spacing: 3px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 6px;
+    font-weight: 400;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+    padding: 10px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 13px;
+    background: white;
+    color: #333;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #999;
+}
+
+/* Promo Input */
+.promo-input {
+    display: flex;
+    gap: 8px;
+}
+
+.promo-input input {
+    flex: 1;
+}
+
+.apply-btn {
+    padding: 10px 18px;
+    background: white;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 400;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.apply-btn:hover {
+    background: #f5f5f5;
+    border-color: #999;
+}
+
+/* Phone Input */
+.phone-input {
+    display: flex;
+    gap: 8px;
+}
+
+.phone-input select {
+    width: 75px;
+}
+
+.phone-input select:nth-child(2) {
+    width: 65px;
+}
+
+.phone-input input {
+    flex: 1;
+}
+
+/* Card Details */
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #d0d0d0;
+    margin-top: 8px;
+}
+
+.card-icon {
+    text-align: center;
+    color: #999;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+/* Remember Card */
+.remember-card {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #999;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.remember-card input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+/* Purchase Button */
+.purchase-btn {
+    width: 100%;
+    padding: 13px;
+    background: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.purchase-btn:hover {
+    background: #6B0000;
+}
+
+.purchase-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Error Messages */
+.error-message {
+    color: #d32f2f;
+    font-size: 11px;
+    margin-top: 4px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.form-group.error input,
+.form-group.error select {
+    border-color: #d32f2f;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets - NIZAMI Cinema</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="order-modal.css">
+    <link rel="stylesheet" href="success-modal.css">
+</head>
+<body data-theme="dark">
+    <!-- Left Side - Movie Poster -->
+    <div class="booking-container">
+        <div class="poster-side" id="posterSide">
+            <div class="navbar-booking">
+                <div class="logo">
+                    NIZAMI
+                </div>
+                <a href="index.html" class="back-link">✕</a>
+            </div>
+            <div class="poster-content">
+                <h1 id="movieTitle">Spirited Away</h1>
+                <div class="movie-meta">
+                    <span id="movieDuration">1 h 18 m</span>
+                </div>
+            </div>
+
+            <!-- Selected Seats Panel -->
+            <div class="selected-panel" id="selectedPanel">
+                <h3>SELECTED SEATS <span class="seats-counter" id="seatsCounter">(0/6)</span></h3>
+                <div class="selected-list" id="selectedList"></div>
+                <button class="btn-purchase" id="purchaseBtn">
+                    <span>Purchase (<span id="purchaseTotal">0₾</span>)</span>
+                </button>
+                <div class="timer" id="timer">Time left to purchase: 10:15</div>
+            </div>
+        </div>
+
+        <!-- Right Side - Booking Form -->
+        <div class="booking-side">
+            <div class="user-icon">👤</div>
+            
+            <!-- Date Selection -->
+            <div class="selector-group">
+                <h3>Date</h3>
+                <div class="selector-pills" id="dateSelector"></div>
+            </div>
+
+            <div class="input-separator"></div>
+
+            <!-- Time Selection -->
+            <div class="selector-group">
+                <h3>Time</h3>
+                <div class="selector-pills" id="timeSelector"></div>
+            </div>
+
+            <div class="input-separator"></div>
+
+            <!-- Seat Selection -->
+            <div class="seats-area">
+                <div class="screen-container">
+                    <div class="screen"></div>
+                </div>
+                
+                <div class="seats-grid" id="seatsGrid"></div>
+
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="seat available"></div>
+                        <span>Available</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="seat booked"></div>
+                        <span>Booked</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="seat selected"></div>
+                        <span>Selected</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Action -->
+            <div class="booking-action">
+                <div class="total-price">
+                    <span>Total Price</span>
+                    <span id="totalPrice">0₾</span>
+                </div>
+                <button class="btn-book" id="bookBtn" disabled>Book Now</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Order Modal -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <h2 class="order-title">ORDER</h2>
+            
+            <form id="orderForm" class="order-form">
+                <!-- Name -->
+                <div class="form-group">
+                    <label>Name and surname</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <!-- Promo Code -->
+                <div class="form-group">
+                    <label>Promo</label>
+                    <div class="promo-input">
+                        <input type="text" id="promo" name="promo" placeholder="">
+                        <button type="button" class="apply-btn" id="applyPromo">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label>Cell-phone</label>
+                    <div class="phone-input">
+                        <select id="countryCode" name="countryCode">
+                            <option value="+994">+994</option>
+                            <option value="+995">+995</option>
+                        </select>
+                        <select id="operator" name="operator">
+                            <option value="10">10</option>
+                            <option value="50">50</option>
+                            <option value="51">51</option>
+                            <option value="55">55</option>
+                        </select>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="7" placeholder="1234567" required>
+                    </div>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="form-group">
+                    <label>Payment</label>
+                    <select id="paymentMethod" name="paymentMethod">
+                        <option value="visa">Visa bank card</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="cash">Cash</option>
+                    </select>
+                </div>
+
+                <!-- Card Details -->
+                <div class="card-details" id="cardDetails">
+                    <div class="card-icon">💳</div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number (16 digits)" maxlength="19">
+                        <span class="error-message" id="cardError"></span>
+                    </div>
+                    
+                    <div class="card-row">
+                        <input type="text" id="expDate" name="expDate" placeholder="MM/YY" maxlength="5">
+                        <input type="text" id="cvv" name="cvv" placeholder="CVV" maxlength="3">
+                    </div>
+                    <span class="error-message" id="cardDetailsError"></span>
+                    
+                    <div class="form-group">
+                        <input type="text" id="cardName" name="cardName" placeholder="Name on card">
+                        <span class="error-message" id="cardNameError"></span>
+                    </div>
+
+                    <div class="remember-card">
+                        <input type="checkbox" id="rememberCard" name="rememberCard">
+                        <label for="rememberCard">Remember card information</label>
+                    </div>
+                </div>
+
+                <!-- Purchase Button -->
+                <button type="submit" class="purchase-btn" id="purchaseModalBtn">
+                    Purchase (<span id="modalTotal">0</span>₾)
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <button class="close-success" id="closeSuccess">×</button>
+            <h2 class="success-title">Congratulations!</h2>
+            <p class="success-message">
+                You've bought two tickets. Please save it on your device and show before the entering to the theatre
+            </p>
+        </div>
+    </div>
+
+    <script src="booking.js"></script>
+    <script src="order-modal.js"></script>
+</body>
+</html>
