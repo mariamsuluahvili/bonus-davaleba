@@ -29,7 +29,7 @@ function loadMovieData() {
     }
 }
 
-// Load booking configuration from JSONუ
+// Load booking configuration from JSON
 function loadBookingConfig() {
     fetch('booking-config.json')
         .then(res => res.json())

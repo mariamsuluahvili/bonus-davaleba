@@ -82,10 +82,7 @@ function renderAll() {
 
     updateSlider();
 
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % sliderMovies.length;
-        updateSlider();
-    }, 4000);
+   
 }
 
 // Update slider active state

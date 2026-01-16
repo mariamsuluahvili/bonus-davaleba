@@ -302,6 +302,13 @@ function showSuccessModal(bookingData) {
         redirectToHome();
     });
     
+       // Save tickets button
+    saveTicketsBtn.addEventListener('click', () => {
+        downloadTicket(bookingData);
+        successModal.classList.remove('show');
+        redirectToHome();
+    });
+
     
     // Auto redirect after 10 seconds
     setTimeout(() => {
