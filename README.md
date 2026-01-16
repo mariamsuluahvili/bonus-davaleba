@@ -33,6 +33,3 @@ localStorage used for taken seats
 -  Live link
 https://mariamsuluahvili.github.io/bonus-davaleba/
 
-
-Live link
-https://mariamsuluahvili.github.io/bonus-davaleba/
